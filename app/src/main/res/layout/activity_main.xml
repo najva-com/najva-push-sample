@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+ android:padding="10dp"
+    >
+  <include
+      android:id="@+id/toolbar"
+      layout="@layout/toolbar"
+      />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      >
+   <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@color/white"
+      android:hint="token"
+      android:id="@+id/token"
+       android:layout_weight="1"
+       android:gravity="center"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="توکن کاربر:"
+        android:layout_weight="0"
+        />
+
+  </LinearLayout>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="اقدام پس از کلیک:"
+      />
+
+<!--  android:entries="@string/action_search"-->
+  <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:background="@drawable/spinner_bg"
+        android:textColor="@color/black"
+       />
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="10dp"
+
+      android:orientation="horizontal">
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/trash"
+        android:onClick="delete"
+        android:id="@+id/trash_link" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:hintTextColor="@color/black"
+
+    >
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="لینک"
+          android:text="http://www.najva.com"
+          android:id="@+id/link"
+          android:textCursorDrawable="@drawable/black_cursor"
+          android:maxLines="2"
+          />
+    </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/trash"
+        android:id="@+id/trash_title"
+        android:onClick="delete"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight ="10dp"
+        android:paddingLeft="10dp"
+        app:hintTextColor="@color/black">
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="عنوان "
+          android:id="@+id/title"
+          android:maxLength="100"
+          android:layout_gravity="right"
+          android:text="تست"
+          android:textCursorDrawable="@drawable/black_cursor"
+          android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/trash"
+        android:id="@+id/trash_description"
+        android:onClick="delete"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight ="10dp"
+        android:paddingLeft="10dp"
+        app:hintTextColor="@color/black">
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="توضیح"
+          android:id="@+id/description"
+          android:layout_gravity="right"
+          android:maxLength="200"
+          android:text="پوش نوتیفیکیشن اندروید نجوا"
+          android:textCursorDrawable="@drawable/black_cursor"
+          android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/trash"
+        android:id="@+id/trash_icon"
+        android:onClick="delete"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight ="10dp"
+        android:paddingLeft="10dp"
+        app:hintTextColor="@color/black">
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="آیکون (لطفا یک لینک وارد کنید.)"
+          android:text="https://doc.najva.com/img/najva.png"
+          android:id="@+id/icon"
+          android:layout_gravity="right"
+          android:textCursorDrawable="@drawable/black_cursor"
+          android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+    <Button
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/trash"
+        android:id="@+id/trash_image"
+        android:onClick="delete"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight ="10dp"
+        android:paddingLeft="10dp"
+        app:hintTextColor="@color/black">
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="عکس (لطفا یک لینک وارد کنید.)"
+          android:id="@+id/image"
+          android:layout_gravity="right"
+          android:text="https://doc.najva.com/img/najva.png"
+          android:textCursorDrawable="@drawable/black_cursor"
+          android:maxLines="1"/>
+    </com.google.android.material.textfield.TextInputLayout>
+  </LinearLayout>
+  <TextView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="اولویت:"
+      />
+  <Spinner
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:id="@+id/spinner2"
+      android:background="@drawable/spinner_bg"
+      android:textColor="@color/black"
+      />
+  <Button
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="ارسال نوتیفیکیشن"
+      android:textColor="@color/black"
+      android:background="@color/teal_200"
+      android:layout_gravity="center"
+      android:layout_marginTop="10dp"
+      android:onClick="sendPush"
+      android:id="@+id/button_send"
+
+      />
+</LinearLayout>
+

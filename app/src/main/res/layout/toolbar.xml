@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    local:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    local:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:visibility="visible">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/najva"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" najva "
+            android:textColor="@color/teal_200"
+            android:textSize="25dp"
+            android:layout_weight="1" />
+
+        <Button
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/reload"
+            android:onClick="refresh" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.05"/>
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:text="ثبت نام"
+            android:textColor="@color/black"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:id="@+id/btn_register"
+           />
+
+
+    </LinearLayout>
+</androidx.appcompat.widget.Toolbar>
